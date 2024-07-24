@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #APP pip
-    'typing_extensions'
+    'django_extensions',
 
     #APP progect
     'hr'
