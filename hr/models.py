@@ -33,7 +33,7 @@ class Employee(models.Model):
     workspace = models.PositiveSmallIntegerField(choices=Workplace.choices, default=Workplace.JOB_1, help_text="Position in the company?")
     contact = models.OneToOneField(Contact, on_delete=models.CASCADE, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, default=None)
-    compensation = models.ManyToManyField(Compensation)
+    compensations = models.ManyToManyField(Compensation)
 
     def __str__(self):
         return f'{self.first_name}, {self.last_name}'
